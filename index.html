@@ -1,0 +1,403 @@
+<html><head><base href="https://aseret-hadibrot.co.il" />     
+    <title>עשרת הדיברות של שלום בית - משימות, משחקים והמלצות</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Varela+Round&display=swap');
+        
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #e74c3c;
+            --text-color: #2c3e50;
+            --bg-color: #ecf0f1;
+            --card-bg: #ffffff;
+            --whatsapp-color: #25D366;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Varela Round', sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            direction: rtl;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header h1 {
+            font-family: 'Amatic SC', cursive;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        main {
+            padding: 2rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .commandment {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .commandment:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .commandment h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .commandment p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .activity {
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .activity h3 {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .activity ul {
+            padding-right: 1.5rem;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .whatsapp-button {
+            display: inline-block;
+            background-color: var(--whatsapp-color);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+        }
+        
+        .contact-section {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .heart-section {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            text-align: center;
+            z-index: 1000;
+        }
+        
+        .heart-label {
+            font-size: 14px;
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .heart-button {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            color: var(--secondary-color);
+            font-weight: bold;
+            text-align: center;
+            border-radius: 0;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .heart-button:hover {
+            transform: scale(1.1);
+        }
+        
+        .heart-button:before, .heart-button:after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            width: 50px;
+            height: 80px;
+            border-radius: 50px 50px 0 0;
+            background: var(--secondary-color);
+        }
+        
+        .heart-button:before {
+            left: 50px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        
+        .heart-button:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+        
+        #tip-popup {
+            position: fixed;
+            top: 50%;
+            right: 130px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            max-width: 250px;
+            z-index: 1001;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>עשרת הדיברות של שלום בית</h1>
+        <p>משימות, משחקים והמלצות לחיזוק הזוגיות</p>
+    </header>
+    <main>
+        <div class="commandment">
+            <h2>1. תקשורת פתוחה וכנה</h2>
+            <p>דברו בפתיחות על רגשותיכם, מחשבותיכם וציפיותיכם. הקשיבו בתשומת לב זה לזו ללא שיפוטיות.</p>
+            <div class="activity">
+                <h3>משחק: "5 דקות של הקשבה"</h3>
+                <ul>
+                    <li>קבעו טיימר ל-5 דקות</li>
+                    <li>אחד מבני הזוג מדבר על נושא כלשהו ללא הפרעה</li>
+                    <li>השני מקשיב בתשומת לב מבלי להגיב</li>
+                    <li>בתום הזמן, המקשיב מסכם את מה ששמע</li>
+                    <li>החליפו תפקידים וחזרו על התהליך</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="commandment">
+            <h2>2. כבוד הדדי</h2>
+            <p>כבדו את הדעות, הרצונות והגבולות של בן/בת הזוג. התייחסו זה לזו בכבוד גם ברגעי מחלוקת.</p>
+            <div class="activity">
+                <h3>טיפ: "יום ההערכה"</h3>
+                <ul>
+                    <li>קבעו יום בשבוע כ"יום ההערכה"</li>
+                    <li>במהלך היום, שימו לב לדברים שבן/בת הזוג עושים</li>
+                    <li>הביעו הערכה מילולית לפחות 3 פעמים במהלך היום</li>
+                    <li>בסוף היום, שתפו מה למדתם חדש על בן/בת הזוג</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="commandment">
+            <h2>3. הערכה ותודה</h2>
+            <p>הביעו הערכה על המאמצים והתרומות של בן/בת הזוג. אמרו תודה על הדברים הקטנים והגדולים.</p>
+            <div class="activity">
+                <h3>משימה: "יומן התודה הזוגי"</h3>
+                <ul>
+                    <li>קנו או הכינו יומן משותף</li>
+                    <li>כל יום, כתבו לפחות דבר אחד שאתם מודים עליו לבן/בת הזוג</li>
+                    <li>בסוף כל שבוע, קראו יחד את הכתוב ושתפו תחושות</li>
+                    <li>שמרו על היומן כמזכרת לרגעים טובים</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="commandment">
+            <h2>4. זמן איכות משותף</h2>
+            <p>הקדישו זמן קבוע לבילוי משותף ללא הסחות דעת. צרו חוויות ורגעים מיוחדים יחד.</p>
+            <div class="activity">
+                <h3>המלצה: "ערב נוסטלגיה"</h3>
+                <ul>
+                    <li>בחרו ערב לצפייה בתמונות וסרטונים מהעבר המשותף</li>
+                    <li>הכינו אלבום דיגיטלי או פיזי של רגעים מיוחדים</li>
+                    <li>שחזרו את הדייט הראשון שלכם</li>
+                    <li>כתבו מכתב לעצמכם בעתיד, ותארו את הרגשות שלכם כעת</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="commandment">
+            <h2>5. תמיכה הדדית</h2>
+            <p>היו שם זה עבור זו ברגעי שמחה ומשבר. עודדו את החלומות והשאיפות של בן/בת הזוג.</p>
+            <div class="activity">
+                <h3>משחק: "מעגל החלומות"</h3>
+                <ul>
+                    <li>כל אחד כותב 3 חלומות או שאיפות על פתקים</li>
+                    <li>הניחו את הפתקים במעגל על הרצפה</li>
+                    <li>בתורות, בחרו פתק של בן/בת הזוג</li>
+                    <li>דונו כיצד תוכלו לתמוך בהגשמת החלום הזה</li>
+                    <li>צרו תוכנית פעולה משותפת להגשמת לפחות חלום אחד</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="commandment">
+            <h2>6. גמישות ופשרה</h2>
+            <p>היו גמישים ומוכנים לפשרה. חפשו פתרונות שמיטיבים עם שני הצדדים.</p>
+            <div class="activity">
+                <h3>טיפ: "שיטת שלושת הפתרונות"</h3>
+                <ul>
+                    <li>בכל מחלוקת, כל צד מציע 3 פתרונות אפשריים</li>
+                    <li>דונו ביתרונות ובחסרונות של כל פתרון</li>
+                    <li>נסו למזג רעיונות ליצירת פתרון מוסכם</li>
+                    <li>אם לא מגיעים להסכמה, דחו את ההחלטה ב-24 שעות וחזרו לדון</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="commandment">
+            <h2>7. שמירה על עצמאות</h2>
+            <p>כבדו את הצורך של כל אחד במרחב אישי ובזמן לעצמו. עודדו צמיחה אישית לצד הקשר הזוגי.</p>
+            <div class="activity">
+                <h3>משימה: "שבוע העצמאות"</h3>
+                <ul>
+                    <li>קבעו שבוע שבו כל אחד מתנסה בתחביב או פעילות חדשה</li>
+                    <li>הקציבו לפחות שעתיים בשבוע לפעילות זו</li>
+                    <li>בסוף השבוע, שתפו חוויות ותובנות מהתהליך</li>
+                    <li>דונו כיצד הצמיחה האישית משפיעה על הקשר הזוגי</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="commandment">
+            <h2>8. אינטימיות ורומנטיקה</h2>
+            <p>טפחו את הקשר הפיזי והרגשי ביניכם. הפתיעו זה את זו ושמרו על הניצוץ הרומנטי.</p>
+            <div class="activity">
+                <h3>משחק: "21 יום של מחוות אהבה"</h3>
+                <ul>
+                    <li>כל יום במשך 21 יום, עשו מחווה קטנה לבן/בת הזוג</li>
+                    <li>המחוות יכולות להיות פיזיות, מילוליות או מעשיות</li>
+                    <li>נהלו יומן של המחוות והתגובות אליהן</li>
+                    <li>בתום 21 יום, שתפו את החוויות ובחרו את המחוות האהובות ביותר</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="commandment">
+            <h2>9. ניהול קונפליקטים בונה</h2>
+            <p>התמודדו עם מחלוקות בצורה בונה ומכבדת. התמקדו בפתרון בעיות ולא בהאשמות.</p>
+            <div class="activity">
+                <h3>טיפ: "כללי הויכוח הבריא"</h3>
+                <ul>
+                    <li>קבעו יחד כללים לניהול ויכוח בריא (למשל: לא לצעוק, לא להשתמש במילים פוגעניות)</li>
+                    <li>השתמשו במשפטי "אני מרגיש/ה" במקום האשמות</li>
+                    <li>הגדירו "פסק זמן" כשהדברים מתחממים</li>
+                    <li>סכמו כל ויכוח עם לפחות נקודה חיובית אחת</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="commandment">
+            <h2>10. צמיחה משותפת</h2>
+            <p>למדו וצמחו יחד כזוג. קבעו יעדים משותפים ועבדו יחד להגשמתם.</p>
+            <div class="activity">
+                <h3>המלצה: "פרויקט הזוגיות השנתי"</h3>
+                <ul>
+                    <li>בתחילת כל שנה, בחרו נושא או מיומנות שתרצו ללמוד יחד</li>
+                    <li>קבעו יעדים ברורים ולוח זמנים</li>
+                    <li>הקדישו זמן קבוע כל שבוע ללמידה משותפת</li>
+                    <li>בסוף השנה, חגגו את ההישגים וההתקדמות שלכם</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2>צריכים עזרה נוספת?</h2>
+            <p>אנחנו כאן בשבילכם! צרו קשר עם אנשי המקצוע המומלצים שלנו לייעוץ אישי.</p>
+            <a href="https://wa.me/972545425189" class="whatsapp-button" target="_blank">
+                לייעוץ עם אנשי מקצוע מומלצים
+            </a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 עשרת הדיברות של שלום בית. כל הזכויות שמורות לאריאל אוחיון.</p>
+    </footer>
+    
+    <div class="heart-section">
+        <div class="heart-label">לחץ עליי לטיפ אוהב</div>
+        <button class="heart-button" id="tip-button" aria-label="לחץ עליי לטיפ אוהב"></button>
+    </div>
+    <div id="tip-popup"></div>
+    
+    <script>
+        const tipButton = document.getElementById('tip-button');
+        const tipPopup = document.getElementById('tip-popup');
+        const tips = [
+            "הקשיבו זה לזו בלי לשפוט",
+            "אמרו 'תודה' על דברים קטנים",
+            "קבעו זמן איכות קבוע בלי הסחות",
+            "חבקו זה את זו לפחות 20 שניות ביום",
+            "שתפו ברגשות שלכם בכנות",
+            "עשו משהו מפתיע עבור בן/בת הזוג",
+            "כתבו פתק אהבה קטן והחביאו אותו",
+            "זכרו לצחוק יחד כל יום",
+            "תנו מחמאה אמיתית לבן/בת הזוג",
+            "הביעו הערכה על מאמצים קטנים"
+        ];
+        
+        tipButton.addEventListener('click', () => {
+            const randomTip = tips[Math.floor(Math.random() * tips.length)];
+            tipPopup.textContent = randomTip;
+            tipPopup.style.display = 'block';
+            
+            setTimeout(() => {
+                tipPopup.style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
